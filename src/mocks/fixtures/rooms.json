@@ -1,0 +1,47 @@
+[
+  {
+    "id": "r-1001",
+    "title": "Sunny room near De Pijp",
+    "price": 750,
+    "budgetRange": "€600-800",
+    "city": "Amsterdam",
+    "neighborhood": "De Pijp",
+    "coords": { "lat": 52.353, "lng": 4.895 },
+    "roomType": "private",
+    "moveInDate": "2025-10-01",
+    "amenities": ["wifi", "washing_machine", "balcony"],
+    "roommates": { "count": 2, "genders": ["F", "M"] },
+    "photos": ["/placeholder/room1.jpg"],
+    "description": "Bright room, shared kitchen and living room."
+  },
+  {
+    "id": "r-1002",
+    "title": "Cozy room in Oost",
+    "price": 900,
+    "budgetRange": "€800-1000",
+    "city": "Amsterdam",
+    "neighborhood": "Oost",
+    "coords": { "lat": 52.362, "lng": 4.94 },
+    "roomType": "private",
+    "moveInDate": "2025-11-01",
+    "amenities": ["wifi", "dishwasher"],
+    "roommates": { "count": 1, "genders": ["F"] },
+    "photos": ["/placeholder/room2.jpg"],
+    "description": "Calm street, great connection to tram lines."
+  },
+  {
+    "id": "r-2001",
+    "title": "Shared room near Jordaan",
+    "price": 600,
+    "budgetRange": "€400-600",
+    "city": "Amsterdam",
+    "neighborhood": "Jordaan",
+    "coords": { "lat": 52.377, "lng": 4.883 },
+    "roomType": "shared",
+    "moveInDate": "2025-10-15",
+    "amenities": ["wifi"],
+    "roommates": { "count": 3, "genders": ["M", "M", "F"] },
+    "photos": ["/placeholder/room3.jpg"],
+    "description": "Budget-friendly shared room in top location."
+  }
+]
