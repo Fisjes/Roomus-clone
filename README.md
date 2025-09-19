@@ -1,4 +1,4 @@
-# Roomus Sandbox – Student Project
+# Roomus Listings – Student Project
 
 Welcome 👋  
 This repository is a **sandbox** for redesigning and implementing the **Room Listings** feature of Roomus (our roommate-matching app). It is **disconnected from the real backend** – all data is mocked locally, so you can experiment safely.
