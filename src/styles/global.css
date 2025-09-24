@@ -1,15 +1,17 @@
-:root { --gap: 16px; --border:#eaeaea; --bg:#fff; --muted:#666; }
+@import "tailwindcss";
+
+:root { --gap: 20px; --border:#eaeaea; --bg:#fff; --muted:#666; }
 *{box-sizing:border-box} body{margin:0;font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;color:#111;background:#fafafa}
 header{background:#fff;position:sticky;top:0;z-index:10}
-.layout{display:grid;grid-template-columns:280px 1fr;gap:var(--gap)}
+.layout{display:grid;grid-template-columns:280px 1fr;column-gap:var(--gap)}
 @media (max-width: 900px){ .layout{grid-template-columns:1fr} .filters{order:2} }
 
 .filters{background:#fff;border:1px solid var(--border);padding:16px;border-radius:12px;height:fit-content;position:sticky;top:72px}
-.filters label, .filters fieldset{display:block;margin:12px 0}
+.filters fieldset{display:block;margin:12px 0}
+.filters label { margin: 12px 0; }
 .filters input[type="text"], .filters input[type="date"], .filters select{width:100%;padding:8px;border:1px solid var(--border);border-radius:8px}
-.checkbox{display:flex;gap:8px;align-items:center}
 
-.results .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--gap);margin-top:var(--gap)}
+.results .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));column-gap:var(--gap)}
 .card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .card__media .imgph{width:100%;aspect-ratio:4/3;background:#ddd}
 .card__body{padding:12px}

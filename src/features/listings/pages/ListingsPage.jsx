@@ -46,7 +46,7 @@ export default function ListingsPage() {
   return (
     <div className="layout">
       <aside className="filters">
-        <h2>Filters</h2>
+        <h2 className='font-bold'>Filters</h2>
         <label>
           City / neighborhood
           <input
@@ -74,10 +74,10 @@ export default function ListingsPage() {
           </select>
         </label>
 
-        <fieldset>
-          <legend>Amenities</legend>
+        <fieldset className='border-1 p-3 rounded-2xl'>
+          <legend className='p-2 font-semibold'>Amenities</legend>
           {AMENITIES.map(a => (
-            <label key={a} className="checkbox">
+            <label key={a} className="flex items-center gap-2">
               <input
                 type="checkbox"
                 checked={state.amenities.includes(a)}
