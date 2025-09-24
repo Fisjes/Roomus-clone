@@ -16,7 +16,7 @@ export default function RoomDetailPage() {
   return (
     <article className="detail">
       <Link to="..">← Back to listings</Link>
-      <h1>{room.title}</h1>
+      <h1 className=''>{room.title}</h1>
       <p><strong>€{room.price}</strong>/month · {room.neighborhood}, {room.city}</p>
       <p>Move-in: {room.moveInDate} · Type: {room.roomType}</p>
       <p>Amenities: {room.amenities.join(', ')}</p>
