@@ -52,7 +52,6 @@ export default function ListingsPage() {
           <input
             value={state.city}
             onChange={e=>updateParam('city', e.target.value)}
-            
             placeholder="e.g. De Pijp" 
             className='border-1 p-1 rounded-md border-stone-200'
           />
@@ -124,7 +123,7 @@ export default function ListingsPage() {
             onClick={()=>updateParam('page', String(state.page - 1))}
           ><span>Prev</span></button>
           <span>Page {state.page} / {Math.max(1, Math.ceil(data.total / data.pageSize))}</span>
-          <button class='font-bold outline-3 outline-offset-4 rounded-sm md:outline-double'
+          <button class='font-bold'
             disabled={state.page >= Math.ceil(data.total / data.pageSize)}
             onClick={()=>updateParam('page', String(state.page + 1))}
           >Next</button>
