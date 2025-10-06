@@ -53,7 +53,6 @@ export default function ListingsPage() {
             value={state.city}
             onChange={e=>updateParam('city', e.target.value)}
             placeholder="e.g. De Pijp"
-            className='mx-3a'
           />
         </label>
 
