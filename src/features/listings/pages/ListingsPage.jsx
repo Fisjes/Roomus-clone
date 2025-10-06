@@ -52,7 +52,9 @@ export default function ListingsPage() {
           <input
             value={state.city}
             onChange={e=>updateParam('city', e.target.value)}
-            placeholder="e.g. De Pijp"
+            
+            placeholder="e.g. De Pijp" 
+            className='border-1 p-1 rounded-md border-stone-200'
           />
         </label>
 
@@ -117,12 +119,12 @@ export default function ListingsPage() {
         </div>
 
         <div className="pagination">
-          <button
+          <button class='font-bold outline-3 outline-offset-4 rounded-sm md:outline-double'
             disabled={state.page <= 1}
             onClick={()=>updateParam('page', String(state.page - 1))}
-          >Prev</button>
+          ><span>Prev</span></button>
           <span>Page {state.page} / {Math.max(1, Math.ceil(data.total / data.pageSize))}</span>
-          <button
+          <button class='font-bold outline-3 outline-offset-4 rounded-sm md:outline-double'
             disabled={state.page >= Math.ceil(data.total / data.pageSize)}
             onClick={()=>updateParam('page', String(state.page + 1))}
           >Next</button>
