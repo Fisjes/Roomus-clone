@@ -52,8 +52,9 @@ export default function ListingsPage() {
           <input
             value={state.city}
             onChange={e=>updateParam('city', e.target.value)}
+            
             placeholder="e.g. De Pijp" 
-            className='border-1 '
+            className='border-1 p-1 rounded-md border-stone-200'
           />
         </label>
 
