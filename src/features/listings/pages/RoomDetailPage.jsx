@@ -15,7 +15,7 @@ export default function RoomDetailPage() {
 
   return (
     <article className="detail">
-      <Link to="..">← Back to listings</Link>
+      <Link to=".." className="absolute top-20 left-3 border-3 border-gray-300 rounded px-5 py-3 font-[Verdana-Pro] shadow-lg hover:shadow-md hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">← Back to listings</Link>
       <h1 className=''>{room.title}</h1>
       <p><strong>€{room.price}</strong>/month · {room.neighborhood}, {room.city}</p>
       <p>Move-in: {room.moveInDate} · Type: {room.roomType}</p>
