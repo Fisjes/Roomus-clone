@@ -88,8 +88,9 @@ export default function ListingsPage() {
           City / neighborhood
           <input
             value={state.city}
-            onChange={e => updateParam('city', e.target.value)}
-            placeholder="e.g. De Pijp"
+            onChange={e=>updateParam('city', e.target.value)}
+            placeholder="e.g. De Pijp" 
+            className='border-1 p-1 rounded-md border-stone-200'
           />
         </label>
 
@@ -157,9 +158,16 @@ export default function ListingsPage() {
 
         </div>
 
-        
-        <div ref={loaderRef} className="py-8 text-gray-500 text-center">
-          {loading ? "Loading more…" : !hasMore ? "No more rooms" : ""}
+        <div className="pagination">
+          <button class='font-bold outline-3 outline-offset-4 rounded-sm md:outline-double'
+            disabled={state.page <= 1}
+            onClick={()=>updateParam('page', String(state.page - 1))}
+          ><span>Prev</span></button>
+          <span>Page {state.page} / {Math.max(1, Math.ceil(data.total / data.pageSize))}</span>
+          <button class='font-bold'
+            disabled={state.page >= Math.ceil(data.total / data.pageSize)}
+            onClick={()=>updateParam('page', String(state.page + 1))}
+          >Next</button>
         </div>
       </section>
     </div>
