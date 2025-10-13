@@ -80,17 +80,19 @@ export default function ListingsPage() {
   }
 
   return (
-    <div className="layout">
+    <div className="layout drop-shadow-2xl">
       <aside className="filters">
         {/* --- Filters (same as before) --- */}
         <h2 className='font-bold'>Filters</h2>
         <label>
           City / neighborhood
           <input
-            value={state.city}
-            onChange={e => updateParam('city', e.target.value)}
-            placeholder="e.g. De Pijp"
-          />
+  className="border border-gray-300 rounded-md p-2 w-full focus:border-blue-500 focus:outline-none"
+  value={state.city}
+  onChange={e => updateParam('city', e.target.value)}
+  placeholder="e.g. De Pijp"
+/>
+        
         </label>
 
         <label>
@@ -149,10 +151,10 @@ export default function ListingsPage() {
         {items.length === 0 && loading && <div className="loading">Loading…</div>}
         {!loading && items.length === 0 && <div className="empty">No rooms match. Try widening your budget.</div>}
 
-        <div className="grid">
+        <div className="grid gap-3">
           {items.map(room =>
 
-          <RoomCard key={room.id} room={room} />
+          <RoomCard key={room.id} room={room} className="animate-fadeIn" />
          )}
 
         </div>
