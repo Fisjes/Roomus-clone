@@ -17,6 +17,7 @@ export default function ListingsPage() {
   const loaderRef = useRef(null);             
  
   const state = useMemo(() => ({
+
     city: searchParams.get('city') || '',
     budgetRange: searchParams.get('budgetRange') || '',
     roomType: searchParams.get('roomType') || '',
@@ -31,7 +32,6 @@ export default function ListingsPage() {
     setPage(1);
     setHasMore(true);
   }, [state.city, state.budgetRange, state.roomType, state.amenities.join(','), state.moveInDate, state.sort]);
-
  
   const loadItems = async () => {
     if (loading || !hasMore) return;
@@ -80,7 +80,7 @@ export default function ListingsPage() {
   }
 
   return (
-    <div className="layout drop-shadow-2xl">
+    <div className="layout drop-shadow-sm">
       <aside className="filters">
         {/* --- Filters (same as before) --- */}
         <h2 className='font-bold'>Filters</h2>
