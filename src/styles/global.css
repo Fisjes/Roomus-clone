@@ -6,13 +6,13 @@ header{background:#fff;position:sticky;top:0;z-index:10}
 .layout{display:grid;grid-template-columns:280px 1fr;column-gap:var(--gap)}
 @media (max-width: 900px){ .layout{grid-template-columns:1fr} .filters{order:2} }
 
-.filters{background:#fff;border:1px solid var(--border);padding:16px;border-radius:12px;height:fit-content;position:sticky;top:72px}
+.filters{background:#fff;border:0px solid var(--border);padding:16px;border-radius:12px;height:fit-content;position:sticky;top:72px}
 .filters fieldset{display:block;margin:12px 0}
 .filters label { margin: 12px 0; }
 .filters input[type="text"], .filters input[type="date"], .filters select{width:100%;padding:8px;border:1px solid var(--border);border-radius:8px}
 
 .results .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--gap)}
-.card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card{background:#fff;border:0px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .card__media .imgph{width:100%;aspect-ratio:4/3;background:#ddd}
 .card__body{padding:12px}
 .card__title{margin:0 0 6px 0;font-size:1.05rem}

@@ -5,7 +5,7 @@ import { searchRooms } from '../../../api/rooms';
 
 
 const BUDGETS = ['€400-600', '€600-800', '€800-1000', '€1000-1200'];
-const AMENITIES = ['wifi', 'washing_machine', 'dishwasher', 'balcony'];
+const AMENITIES = ['wifi', 'washing machine', 'dishwasher', 'balcony'];
 
 export default function ListingsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
