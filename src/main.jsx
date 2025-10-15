@@ -5,6 +5,7 @@ import './styles/global.css';
 import App from './App.jsx';
 import ListingsPage from './features/listings/pages/ListingsPage.jsx';
 import RoomDetailPage from './features/listings/pages/RoomDetailPage.jsx';
+import HomePage from './features/listings/pages/homePage.jsx';
 
 async function enableMocking() {
   if (!import.meta.env.DEV) return;
@@ -22,6 +23,8 @@ enableMocking().then(() => {
         <Routes>
           {/* App is your layout; it must render <Outlet /> inside */}
           <Route path="/" element={<App />}>
+            <Route index element={<Navigate to="home" replace />} />  {/* redirect / → /home */}
+            <Route path="home" element={<HomePage />} />
             <Route index element={<Navigate to="listings" replace />} />  {/* redirect / → /listings */}
             <Route path="listings" element={<ListingsPage />} />
             <Route path="rooms/:id" element={<RoomDetailPage />} />
